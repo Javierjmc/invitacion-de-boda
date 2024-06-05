@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Audio from '../components/Audio.astro';
+import Hero from '../components/Hero.astro'
+import Anuncio from '../components/Anuncio.astro'
+import Direccion from '../components/Direccion.astro'
+import Mensaje from '../components/Mensaje.astro'
+import fondo from '../../public/fondo.png'
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="max-w-[600px] flex flex-col items-center gap-5 pb-6">
+		<Hero />
+		<section class="flex gap-3 items-center justify-center">			
+			<span class="dorado">Nelson</span><span class="dorado">&</span><span class="dorado">Elsy</span>			
+		</section>
+		
+		<section class="flex flex-col items-center gap-5 bg-cover bg-no-repeat bg-center relative">
+			
+			<Anuncio />
+			<Audio />
+			<span class="text-lg">Y nos encantaria compartir ese día contigo</span>
+			<Direccion />			
+			<section class="w-full h-screen absolute bg-cover bg-no-repeat bg-center z-[-1] opacity-25 top-[-60px]" style={{ backgroundImage:`url(${fondo.src})`}}></section>
+			<Mensaje />
+
+			<p class="w-80 text-center text-lg font-semibold">Por favor ayudanos a confirmar tu asistencia via WhatsApp</p>
+			<a class="bg-rose-400 text-gray-50 font-semibold px-4 py-1 rounded hover:bg-rose-300 active:bg-rose-800" href="https://www.google.com/maps/place/8%C2%B015'55.2%22N+62%C2%B046'58.7%22W/@8.2653314,-62.7855437,17z/data=!3m1!4b1!4m4!3m3!8m2!3d8.2653314!4d-62.7829688?hl=es&entry=ttu" target="_blank">CONFIRMAR</a>
+
+			<p class="font-semibold text-2xl">¡Te esperamos!</p>
+
+		</section>
+		
+
+		
+	
+	</main>
+</Layout>
+
+<style>
+    .dorado{
+        color:transparent;
+        position: relative;
+        z-index: 9999;
+        
+        top:30%;
+        left: 0%;
+        font-size:50px;
+        font-family: 'Times New Roman', serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-image: linear-gradient(
+            to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%
+        );
+        -webkit-background-clip: text;
+    }
+</style>
+
