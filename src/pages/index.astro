@@ -9,7 +9,7 @@ import fondo from '../../public/fondo.png'
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="max-w-[600px] flex flex-col items-center gap-5 pb-6">
+	<main class="max-w-screen-md flex flex-col items-center gap-5 pb-6 media-query">
 		<Hero />
 		<section class="flex gap-3 items-center justify-center">			
 			<span class="dorado">Nelson</span><span class="dorado">&</span><span class="dorado">Elsy</span>			
@@ -19,13 +19,13 @@ import fondo from '../../public/fondo.png'
 			
 			<Anuncio />
 			<Audio />
-			<span class="text-lg">Y nos encantaria compartir ese día contigo</span>
+			<span class="text-lg">Y nos encantaría compartir ese día contigo</span>
 			<Direccion />			
 			<section class="w-full h-screen absolute bg-cover bg-no-repeat bg-center z-[-1] opacity-25 top-[-60px]" style={{ backgroundImage:`url(${fondo.src})`}}></section>
 			<Mensaje />
 
-			<p class="w-80 text-center text-lg font-semibold">Por favor ayudanos a confirmar tu asistencia via WhatsApp</p>
-			<a class="bg-rose-400 text-gray-50 font-semibold px-4 py-1 rounded hover:bg-rose-300 active:bg-rose-800" href="https://www.google.com/maps/place/8%C2%B015'55.2%22N+62%C2%B046'58.7%22W/@8.2653314,-62.7855437,17z/data=!3m1!4b1!4m4!3m3!8m2!3d8.2653314!4d-62.7829688?hl=es&entry=ttu" target="_blank">CONFIRMAR</a>
+			<p class="w-80 text-center text-lg font-semibold">Por favor ayúdanos a confirmar tu asistencia vía WhatsApp</p>
+			<a class="bg-rose-400 text-gray-50 font-semibold px-4 py-1 rounded hover:bg-rose-300 active:bg-rose-800" href="https://wa.me/+584148977352?text=" target="_blank">CONFIRMAR</a>
 
 			<p class="font-semibold text-2xl">¡Te esperamos!</p>
 
@@ -54,5 +54,11 @@ import fondo from '../../public/fondo.png'
         );
         -webkit-background-clip: text;
     }
+
+	@media only screen and (max-width: 400px) {
+  		.media-query {
+    		margin-left:35px;
+  		}
+	}
 </style>
 
